@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="flex flex-col gap-8 items-center justify-center min-h-screen w-full">
+    <section className="box-border flex flex-col gap-8 items-center justify-center min-h-screen w-full">
       <p className="text-3xl mb-3 text-accent">Frontend-Entwickler</p>
       <h1 className="font-mono text-8xl">Mahir Durna</h1>
       <div className="flex gap-4 items-center justify-center">
