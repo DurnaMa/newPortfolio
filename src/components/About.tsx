@@ -1,24 +1,35 @@
+import { useLanguage } from '../i18n/LanguageContext.tsx';
+import SectionHeading from './SectionHeading.tsx';
+
 function About() {
+  const { t } = useLanguage();
+
   return (
-    <section className="box-border pl-4 py-8">
-      <h2 className="w-full max-w-6xl mx-auto text-3xl mb-6 text-accent">Über mich</h2>
+    <section id="about" className="box-border px-4 py-24">
+      <div className="w-full max-w-6xl mx-auto">
+        <SectionHeading index="01" command="cat about.md" title={t.about.heading} />
+      </div>
 
       <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-start">
-        <div className="w-full lg:w-auto flex justify-center lg:block lg:sticky lg:top-8">
+        <div className="w-full max-w-lg mx-auto lg:mx-0 lg:w-5/12 lg:max-w-none shrink-0 lg:sticky lg:top-24">
           <img
-            src="/profilbild/mahirDurna.jpg"
+            src="/profilbild/mahirDurna-large.jpg"
+            srcSet="/profilbild/mahirDurna-medium.jpg 800w, /profilbild/mahirDurna-large.jpg 1200w, /profilbild/mahirDurna.jpg 2000w"
+            sizes="(min-width: 1024px) 480px, (min-width: 512px) 512px, 100vw"
             alt="Mahir Durna"
-            className="w-48 h-48 rounded-lg border-2 border-dress-blues grayscale hover:grayscale-0 transition-all duration-300 shadow-[0_0_15px_rgba(0,255,204,0.3)]"
+            className="w-full aspect-[7/6] object-cover object-[65%_center] rounded-lg border-2 border-dress-blues grayscale hover:grayscale-0 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.3)]"
           />
         </div>
 
-        <div className="flex-1 w-full bg-[#0d1117] rounded-xl border border-gray-800 shadow-2xl overflow-hidden font-mono text-sm sm:text-base">
-          <div className="flex items-center justify-between px-4 py-3 bg-[#161b22] border-b border-gray-800 select-none">
+        <div className="flex-1 w-full bg-surface rounded-xl border border-gray-800 shadow-2xl overflow-hidden font-mono text-sm sm:text-base">
+          <div className="flex items-center justify-between px-4 py-3 bg-surface-2 border-b border-gray-800 select-none">
             <div className="flex space-x-2">
               <span className="w-3 h-3 rounded-full bg-dress-blues"></span>
               <span className="w-3 h-3 rounded-full bg-dress-blues"></span>
               <span className="w-3 h-3 rounded-full bg-dress-blues"></span>
             </div>
+            <span className="text-xs text-muted">mahir@portfolio: ~</span>
+            <span className="w-14" />
           </div>
 
           <div className="p-6 space-y-4 text-gray-300 min-h-45">
@@ -26,30 +37,23 @@ function About() {
               <span className="text-cyan-400 select-none">$</span>
               <span className="text-gray-400">cat about.md</span>
             </div>
-            <div className="leading-relaxed text-gray-100 pl-2">
-              Hey, ich bin Mahir! Wer aus der IT-Administration kommt, weiß, wie wichtig funktionierende Systeme sind.
-              Nach Jahren in der Telematikinfrastruktur wollte ich aber die Seiten wechseln: Weg vom reinen Verwalten,
-              hin zum eigentlichen Bauen. Genau deshalb entwickle ich heute moderne Webanwendungen mit Angular. Mich
-              begeistert es einfach, wenn aus komplexer Logik am Ende eine App wird, die echten Nutzen bringt.
-            </div>
+            <div className="leading-relaxed text-gray-100 pl-2">{t.about.text}</div>
 
             <div className="flex items-center space-x-2">
               <span className="text-cyan-400 select-none">$</span>
               <span className="text-gray-400">cat location.md</span>
             </div>
             <div className="leading-relaxed text-gray-100 pl-2">
-              Location: Molbergen <br /> Work Mode: Remote / Flexible Collaboration
+              {t.about.location}
+              <br />
+              {t.about.workMode}
             </div>
 
             <div className="flex items-center space-x-2">
               <span className="text-cyan-400 select-none">$</span>
               <span className="text-gray-400">cat approach.md</span>
             </div>
-            <div className="leading-relaxed text-gray-100 pl-2">
-              Mit über 12 Projekten in Angular, TypeScript und Supabase im Gepäck bringe ich mein Admin-Mindset in den
-              Code: Fehler schnell isolieren, komplexe Logik ausdauernd lösen und effiziente Ergebnisse liefern. Ich
-              schätze den kreativen Austausch via Scrum und sehe lebenslanges Lernen als Lebenseinstellung.
-            </div>
+            <div className="leading-relaxed text-gray-100 pl-2">{t.about.approach}</div>
 
             <div className="flex items-center space-x-2 pt-2">
               <span className="text-cyan-400 select-none">$</span>

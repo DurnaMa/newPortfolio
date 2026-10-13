@@ -1,14 +1,48 @@
 @import 'tailwindcss';
 @theme {
-  --color-base: #0a0e14;
+  --color-canvas: #0a0e14;
+  --color-surface: #0d1117;
+  --color-surface-2: #161b22;
   --color-accent: #22d3ee;
   --color-text: #e6edf3;
+  --color-muted: #8b949e;
   --color-dress-blues: #2a3441;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 @layer base {
-  body {
-    background-color: var(--color-base);
-    color: var(--color-text);
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-canvas);
+  }
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(42 52 65 / 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(42 52 65 / 0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@utility animate-blink {
+  animation: blink 1s step-end infinite;
 }
