@@ -32,8 +32,8 @@ const de = {
   skills: {
     heading: 'Skills',
     text: 'Mein Fokus liegt auf modernen Frontend-Technologien rund um Angular und TypeScript. Aus der Administration bringe ich ein solides Verständnis für Systeme, Netzwerke und sauberes Troubleshooting mit.',
-    needSkill: 'Du brauchst eine andere Fähigkeit?',
-    cta: 'Lass uns sprechen.',
+    needSkill: 'Neue Tools lerne ich schnell. Fragen zu meinem Tech-Stack?',
+    cta: 'Schreib mir.',
   },
   projects: {
     heading: 'Projekte',
@@ -131,8 +131,8 @@ const en: Translation = {
   skills: {
     heading: 'Skills',
     text: 'My focus is on modern frontend technologies around Angular and TypeScript. From my years in administration, I bring a solid understanding of systems, networks and clean troubleshooting.',
-    needSkill: 'You need another skill?',
-    cta: "Let's talk.",
+    needSkill: 'I pick up new tools fast. Questions about my stack?',
+    cta: 'Get in touch.',
   },
   projects: {
     heading: 'Projects',
