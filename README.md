@@ -117,6 +117,17 @@ The English dictionary is typed against the German one (`const en: Translation`)
 
 The form posts JSON (`name`, `email`, `message`) to `/mail.php`, which sends the message to the address set in `$siteEmail` inside `public/mail.php`.
 
+Spam protection in `mail.php`:
+
+| Measure        | Behavior                                                                                   | Setting                                                |
+| -------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Honeypot field | Hidden `website` input; if it is filled, the request is dropped                            | –                                                      |
+| Time trap      | Messages submitted faster than the minimum fill time (measured in the browser) are dropped | `MIN_FILL_SECONDS` (`3`)                               |
+| Rate limit     | Max. messages per IP per time window, then HTTP `429`                                      | `RATE_LIMIT_MAX` (`3`), `RATE_LIMIT_WINDOW` (`3600` s) |
+| Length limits  | Overlong fields are rejected                                                               | `MAX_NAME`, `MAX_EMAIL`, `MAX_MESSAGE`                 |
+
+Dropped bot requests still receive `{"success": true}`, so bots cannot tell they were detected. The rate limit stores only SHA-256 hashes of IP addresses in the system temp directory (`portfolio-mail-ratelimit/`). `mail.php` sends no CORS headers, so other websites cannot call it from a browser.
+
 > [!IMPORTANT]
 > `mail.php` only runs on a server with PHP. With `npm run dev` or `npm run preview` the form always shows the error message — test it on the real server.
 

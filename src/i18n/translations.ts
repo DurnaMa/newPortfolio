@@ -78,6 +78,8 @@ const de = {
     errorEmailEmpty: 'Bitte gib deine E-Mail-Adresse an.',
     errorEmailInvalid: 'Bitte gib eine gültige E-Mail-Adresse an.',
     errorMsg: 'Bitte gib eine Nachricht ein.',
+    errorRateLimit:
+      'Du hast gerade mehrere Nachrichten gesendet. Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.',
   },
   footer: {
     legal: 'Impressum',
@@ -175,6 +177,7 @@ const en: Translation = {
     errorEmailEmpty: 'Please enter your email address.',
     errorEmailInvalid: 'Please enter a valid email address.',
     errorMsg: 'Please enter a message.',
+    errorRateLimit: "You've sent several messages recently. Please try again later or send me an email directly.",
   },
   footer: {
     legal: 'Legal Notice',

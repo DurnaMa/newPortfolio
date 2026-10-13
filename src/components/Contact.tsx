@@ -1,11 +1,13 @@
-import { useState, type FormEvent } from 'react';
+import { useRef, useState, type FormEvent } from 'react';
 import SectionHeading from './SectionHeading.tsx';
 import { contact } from '../data/content.ts';
 import { useLanguage } from '../i18n/LanguageContext.tsx';
 import type { Translation } from '../i18n/translations.ts';
 
 type Fields = { name: string; email: string; message: string };
-type Status = 'idle' | 'sending' | 'success' | 'error';
+type Status = 'idle' | 'sending' | 'success' | 'error' | 'rateLimited';
+
+class RateLimitError extends Error {}
 
 const emptyFields: Fields = { name: '', email: '', message: '' };
 
@@ -22,7 +24,7 @@ function validate(fields: Fields, form: Translation['form']): Partial<Fields> {
   return errors;
 }
 
-async function sendMail(fields: Fields) {
+async function sendMail(fields: Fields, website: string, fillTime: number) {
   const response = await fetch('/mail.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -30,8 +32,11 @@ async function sendMail(fields: Fields) {
       name: fields.name.trim(),
       email: fields.email.trim(),
       message: fields.message.trim(),
+      website,
+      fillTime,
     }),
   });
+  if (response.status === 429) throw new RateLimitError();
   const data = await response.json();
   if (!response.ok || !data.success) throw new Error(data.error ?? `Status ${response.status}`);
 }
@@ -45,6 +50,10 @@ function Contact() {
   const [touched, setTouched] = useState<Partial<Record<keyof Fields, boolean>>>({});
   const [privacy, setPrivacy] = useState(false);
   const [status, setStatus] = useState<Status>('idle');
+  // Fangfeld: bleibt bei Menschen leer, Bots füllen es aus
+  const [website, setWebsite] = useState('');
+  const [shownAt] = useState(() => Date.now());
+  const lastSentAt = useRef(shownAt);
 
   const errors = validate(fields, t.form);
   const isReady = Object.keys(errors).length === 0 && privacy && status !== 'sending';
@@ -61,14 +70,15 @@ function Contact() {
 
     setStatus('sending');
     try {
-      await sendMail(fields);
+      await sendMail(fields, website, Date.now() - lastSentAt.current);
+      lastSentAt.current = Date.now();
       setStatus('success');
       setFields(emptyFields);
       setTouched({});
       setPrivacy(false);
     } catch (error) {
       console.error('Mail error:', error);
-      setStatus('error');
+      setStatus(error instanceof RateLimitError ? 'rateLimited' : 'error');
     }
   }
 
@@ -92,7 +102,19 @@ function Contact() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="space-y-5">
+          <form onSubmit={handleSubmit} noValidate className="relative space-y-5">
+            <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+              />
+            </div>
             {(
               [
                 { key: 'name', label: t.form.nameLabel, placeholder: t.form.namePh, type: 'text' },
@@ -161,6 +183,7 @@ function Contact() {
             <p role="status" className="font-mono text-sm min-h-5">
               {status === 'success' && <span className="text-accent">{t.form.success}</span>}
               {status === 'error' && <span className="text-red-400">{t.form.errorServer}</span>}
+              {status === 'rateLimited' && <span className="text-red-400">{t.form.errorRateLimit}</span>}
             </p>
           </form>
         </div>
