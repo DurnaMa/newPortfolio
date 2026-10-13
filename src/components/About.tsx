@@ -43,11 +43,7 @@ function About() {
               <span className="text-cyan-400 select-none">$</span>
               <span className="text-gray-400">cat location.md</span>
             </div>
-            <div className="leading-relaxed text-gray-100 pl-2">
-              {t.about.location}
-              <br />
-              {t.about.workMode}
-            </div>
+            <div className="leading-relaxed text-gray-100 pl-2">{t.about.location}</div>
 
             <div className="flex items-center space-x-2">
               <span className="text-cyan-400 select-none">$</span>

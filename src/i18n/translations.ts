@@ -25,7 +25,6 @@ const de = {
     heading: 'Über mich',
     text: 'Hey, ich bin Mahir! Wer aus der IT-Administration kommt, weiß, wie wichtig funktionierende Systeme sind. Nach Jahren in der Telematikinfrastruktur wollte ich aber die Seiten wechseln: Weg vom reinen Verwalten, hin zum eigentlichen Bauen. Genau deshalb entwickle ich heute moderne Webanwendungen mit Angular. Mich begeistert es einfach, wenn aus komplexer Logik am Ende eine App wird, die echten Nutzen bringt.',
     location: 'Standort: Molbergen',
-    workMode: 'Arbeitsmodell: Remote / flexible Zusammenarbeit',
     approach:
       'Mit über 12 Projekten in Angular, TypeScript und Supabase im Gepäck bringe ich mein Admin-Mindset in den Code: Fehler schnell isolieren, komplexe Logik ausdauernd lösen und effiziente Ergebnisse liefern. Ich schätze den kreativen Austausch via Scrum und sehe lebenslanges Lernen als Lebenseinstellung.',
   },
@@ -57,8 +56,8 @@ const de = {
   contact: {
     heading: 'Kontakt',
     title: 'Lass uns',
-    titleAccent: 'zusammenarbeiten.',
-    desc: 'Du suchst einen Frontend-Entwickler, der komplexe Probleme strukturiert angeht und Systeme von Grund auf versteht? Ich freue mich über spannende Projekte, Festanstellungen und Remote-Zusammenarbeit.',
+    titleAccent: 'vernetzen.',
+    desc: 'Fragen zu meinen Projekten, Feedback oder einfach Lust auf einen Austausch über Webentwicklung? Schreib mir – ich freue mich über deine Nachricht.',
   },
   form: {
     nameLabel: 'Wie heißt du?',
@@ -124,7 +123,6 @@ const en: Translation = {
     heading: 'About me',
     text: "Hey, I'm Mahir! Anyone coming from IT administration knows how important working systems are. After years in telematics infrastructure, though, I wanted to switch sides: away from just managing, towards actually building. That's exactly why I now develop modern web applications with Angular. I simply love it when complex logic turns into an app that delivers real value.",
     location: 'Location: Molbergen, Germany',
-    workMode: 'Work mode: Remote / flexible collaboration',
     approach:
       'With more than 12 projects in Angular, TypeScript and Supabase under my belt, I bring my admin mindset into the code: isolating bugs quickly, solving complex logic with persistence and delivering efficient results. I value creative collaboration through Scrum and see lifelong learning as a way of life.',
   },
@@ -155,9 +153,9 @@ const en: Translation = {
   },
   contact: {
     heading: 'Contact',
-    title: "Let's work",
-    titleAccent: 'together.',
-    desc: "Looking for a frontend developer who tackles complex problems in a structured way and understands systems from the ground up? I'm happy to hear about exciting projects, permanent positions and remote collaboration.",
+    title: "Let's",
+    titleAccent: 'connect.',
+    desc: "Questions about my projects, feedback or just up for a chat about web development? Drop me a message – I'm happy to hear from you.",
   },
   form: {
     nameLabel: "What's your name?",
