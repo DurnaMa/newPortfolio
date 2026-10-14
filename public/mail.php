@@ -51,13 +51,13 @@ function isBot(object $params): bool
 /** Gibt true zurück, wenn diese IP das Limit bereits erreicht hat, sonst wird der Versuch gezählt. */
 function isRateLimited(string $ip): bool
 {
-    $dir = sys_get_temp_dir() . '/portfolio-mail-ratelimit';
-    if (!is_dir($dir) && !mkdir($dir, 0700, true) && !is_dir($dir)) {
+    $directory = sys_get_temp_dir() . '/portfolio-mail-ratelimit';
+    if (!is_dir($directory) && !mkdir($directory, 0700, true) && !is_dir($directory)) {
         return false; // Ohne Speicherort kein Limit, Formular soll trotzdem funktionieren
     }
 
     // IP nur gehasht speichern (Datenschutz)
-    $file = $dir . '/' . hash('sha256', $ip) . '.json';
+    $file = $directory . '/' . hash('sha256', $ip) . '.json';
     $handle = fopen($file, 'c+');
     if ($handle === false) {
         return false;
@@ -68,7 +68,7 @@ function isRateLimited(string $ip): bool
     $timestamps = json_decode(stream_get_contents($handle) ?: '[]', true);
     $timestamps = array_values(array_filter(
         is_array($timestamps) ? $timestamps : [],
-        fn($ts) => is_int($ts) && $ts > $now - RATE_LIMIT_WINDOW
+        fn($timestamp) => is_int($timestamp) && $timestamp > $now - RATE_LIMIT_WINDOW
     ));
 
     $limited = count($timestamps) >= RATE_LIMIT_MAX;
