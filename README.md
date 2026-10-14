@@ -42,26 +42,26 @@ Live: [mahir-durna.de](https://mahir-durna.de)
 
 ## Files
 
-| File                                               | Purpose                                                                                                              |
-| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `README.md`                                        | This documentation                                                                                                   |
-| `index.html`                                       | HTML entry point, meta tags                                                                                          |
-| `src/main.tsx`                                     | React entry point, font imports                                                                                      |
-| `src/App.tsx`                                      | Page layout and minimal path-based routing (`/`, `/impressum`, `/datenschutz`)                                       |
-| `src/index.css`                                    | Tailwind import, theme tokens (colors, fonts), custom utilities                                                      |
-| `src/components/`                                  | Page sections (`Navbar`, `Hero`, `About`, `Skills`, `Projects`, `References`, `Contact`, `Footer`, `SectionHeading`) |
-| `src/pages/`                                       | Legal pages (`Impressum`, `Datenschutz`) and their shared `LegalLayout`                                              |
-| `src/data/content.ts`                              | Language-independent data: contact links, skills, projects, reference authors                                        |
-| `src/i18n/translations.ts`                         | All German and English UI texts                                                                                      |
-| `src/i18n/datenschutz.ts`                          | Privacy policy content in German and English                                                                         |
-| `src/i18n/LanguageContext.tsx`                     | Language provider and `useLanguage()` hook                                                                           |
-| `public/mail.php`                                  | Server-side mailer for the contact form                                                                              |
-| `public/.htaccess`                                 | Apache rewrite rule so `/impressum` and `/datenschutz` resolve to the app                                            |
-| `public/robots.txt`                                | Crawler rules (search engines allowed, AI/SEO scrapers opted out)                                                    |
-| `public/sitemap.xml`                               | Sitemap for search engines                                                                                           |
-| `public/img/`, `public/svg/`, `public/profilbild/` | Images, icons and profile pictures                                                                                   |
-| `eslint.config.js`, `.prettierrc`                  | Linting and formatting rules                                                                                         |
-| `vite.config.ts`, `tsconfig*.json`                 | Build and TypeScript configuration                                                                                   |
+| File                                               | Purpose                                                                                                          |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `README.md`                                        | This documentation                                                                                               |
+| `index.html`                                       | HTML entry point, meta tags                                                                                      |
+| `src/main.tsx`                                     | React entry point, font imports                                                                                  |
+| `src/App.tsx`                                      | Page layout and minimal path-based routing (`/`, `/impressum`, `/datenschutz`)                                   |
+| `src/index.css`                                    | Tailwind import, theme tokens (colors, fonts), custom utilities                                                  |
+| `src/components/`                                  | One folder per page section (`navbar`, `hero`, `about`, `skills`, `projects`, `references`, `contact`, `footer`) |
+| `src/pages/`                                       | Legal pages (`Impressum`, `Datenschutz`); building blocks such as `LegalLayout` live in `pages/legal/`           |
+| `src/data/content.ts`                              | Language-independent data: contact links, skills, projects, reference authors                                    |
+| `src/i18n/translations.ts`                         | All German and English UI texts                                                                                  |
+| `src/i18n/datenschutz.ts`                          | Privacy policy content in German and English                                                                     |
+| `src/i18n/LanguageProvider.tsx`, `useLanguage.ts`  | Language provider and `useLanguage()` hook                                                                       |
+| `public/mail.php`                                  | Server-side mailer for the contact form                                                                          |
+| `public/.htaccess`                                 | Apache rewrite rule so `/impressum` and `/datenschutz` resolve to the app                                        |
+| `public/robots.txt`                                | Crawler rules (search engines allowed, AI/SEO scrapers opted out)                                                |
+| `public/sitemap.xml`                               | Sitemap for search engines                                                                                       |
+| `public/img/`, `public/svg/`, `public/profilbild/` | Images, icons and profile pictures                                                                               |
+| `eslint.config.js`, `.prettierrc`                  | Linting and formatting rules                                                                                     |
+| `vite.config.ts`, `tsconfig*.json`                 | Build and TypeScript configuration                                                                               |
 
 ## Prerequisites
 
