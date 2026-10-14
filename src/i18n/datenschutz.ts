@@ -1,5 +1,5 @@
 // Texte aus der alten Datenschutzerklärung (ohne den nicht mehr zutreffenden Google-Fonts-Abschnitt)
-import type { Lang } from './translations.ts';
+import type { Language } from './translations.ts';
 
 export type Inline = string | (string | { href: string; label: string })[];
 
@@ -9,7 +9,7 @@ export type Block =
   | { type: 'ul'; items: string[] }
   | { type: 'address' };
 
-export const datenschutz: Record<Lang, { title: string; blocks: Block[] }> = {
+export const datenschutz: Record<Language, { title: string; blocks: Block[] }> = {
   de: {
     title: 'Datenschutzerklärung',
     blocks: [

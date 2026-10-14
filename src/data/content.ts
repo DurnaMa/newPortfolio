@@ -30,7 +30,7 @@ export const learning = ['React', 'Supabase', 'Tailwind CSS'];
 export type Project = {
   id: string;
   name: string;
-  img: string;
+  image: string;
   tags: string[];
   github: string;
   live: string;
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     id: 'join',
     name: 'Join',
-    img: '/img/join.png',
+    image: '/img/join.png',
     tags: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
     github: 'https://github.com/DurnaMa/join',
     live: 'https://join.mahir-durna.de/',
@@ -48,14 +48,16 @@ export const projects: Project[] = [
   {
     id: 'fantasy-platform',
     name: 'Fantasy Platform',
-    img: '/img/fantasyPlatform.png',
+    image: '/img/fantasyPlatform.png',
     tags: ['JavaScript', 'HTML', 'CSS'],
     github: 'https://github.com/DurnaMa/2dGame',
     live: 'https://2d-game.mahir-durna.de/',
   },
 ];
 
-export const references = [
+export type Reference = { author: string; role: string };
+
+export const references: Reference[] = [
   {
     author: 'T. Schulz',
     role: 'Frontend Developer',

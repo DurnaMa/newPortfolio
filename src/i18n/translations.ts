@@ -10,14 +10,14 @@ const de = {
     projects: 'Projekte',
     contact: 'Kontakt',
     openMenu: 'Menü öffnen',
-    switchLang: 'Sprache wechseln',
+    switchLanguage: 'Sprache wechseln',
   },
   hero: {
     subtitle: 'Frontend-Entwickler',
     intro:
       'Vom IT-Administrator zum Entwickler: Ich baue moderne, nutzerorientierte Webanwendungen mit Angular und TypeScript.',
-    btnWork: 'Projekte ansehen',
-    btnContact: 'Kontakt aufnehmen',
+    buttonProjects: 'Projekte ansehen',
+    buttonContact: 'Kontakt aufnehmen',
     scroll: 'Nach unten scrollen',
     email: 'E-Mail',
   },
@@ -31,8 +31,8 @@ const de = {
   skills: {
     heading: 'Skills',
     text: 'Mein Fokus liegt auf modernen Frontend-Technologien rund um Angular und TypeScript. Aus der Administration bringe ich ein solides Verständnis für Systeme, Netzwerke und sauberes Troubleshooting mit.',
-    needSkill: 'Neue Tools lerne ich schnell. Fragen zu meinem Tech-Stack?',
-    cta: 'Schreib mir.',
+    stackQuestion: 'Neue Tools lerne ich schnell. Fragen zu meinem Tech-Stack?',
+    callToAction: 'Schreib mir.',
   },
   projects: {
     heading: 'Projekte',
@@ -57,15 +57,16 @@ const de = {
     heading: 'Kontakt',
     title: 'Lass uns',
     titleAccent: 'vernetzen.',
-    desc: 'Fragen zu meinen Projekten, Feedback oder einfach Lust auf einen Austausch über Webentwicklung? Schreib mir – ich freue mich über deine Nachricht.',
+    description:
+      'Fragen zu meinen Projekten, Feedback oder einfach Lust auf einen Austausch über Webentwicklung? Schreib mir – ich freue mich über deine Nachricht.',
   },
   form: {
     nameLabel: 'Wie heißt du?',
-    namePh: 'Dein Name',
+    namePlaceholder: 'Dein Name',
     emailLabel: 'Deine E-Mail-Adresse?',
-    emailPh: 'deine@email.de',
-    msgLabel: 'Wie kann ich helfen?',
-    msgPh: 'Hallo Mahir, ich interessiere mich für…',
+    emailPlaceholder: 'deine@email.de',
+    messageLabel: 'Wie kann ich helfen?',
+    messagePlaceholder: 'Hallo Mahir, ich interessiere mich für…',
     privacyBefore: 'Ich habe die',
     privacyLink: 'Datenschutzerklärung',
     privacyAfter: 'gelesen und stimme der Verarbeitung meiner Daten zu.',
@@ -76,7 +77,7 @@ const de = {
     errorName: 'Bitte gib deinen Namen an.',
     errorEmailEmpty: 'Bitte gib deine E-Mail-Adresse an.',
     errorEmailInvalid: 'Bitte gib eine gültige E-Mail-Adresse an.',
-    errorMsg: 'Bitte gib eine Nachricht ein.',
+    errorMessage: 'Bitte gib eine Nachricht ein.',
     errorRateLimit:
       'Du hast gerade mehrere Nachrichten gesendet. Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.',
   },
@@ -86,7 +87,7 @@ const de = {
   },
   impressum: {
     title: 'Impressum',
-    sub: 'Angaben gemäß § 5 DDG',
+    legalBasis: 'Angaben gemäß § 5 DDG',
     contact: 'Kontakt',
     phone: 'Telefon:',
     email: 'E-Mail:',
@@ -108,14 +109,14 @@ const en: Translation = {
     projects: 'Projects',
     contact: 'Contact',
     openMenu: 'Open menu',
-    switchLang: 'Switch language',
+    switchLanguage: 'Switch language',
   },
   hero: {
     subtitle: 'Frontend Developer',
     intro:
       'From IT administrator to developer: I build modern, user-centric web applications with Angular and TypeScript.',
-    btnWork: 'Check my work',
-    btnContact: 'Contact me',
+    buttonProjects: 'Check my work',
+    buttonContact: 'Contact me',
     scroll: 'Scroll down',
     email: 'Email',
   },
@@ -129,8 +130,8 @@ const en: Translation = {
   skills: {
     heading: 'Skills',
     text: 'My focus is on modern frontend technologies around Angular and TypeScript. From my years in administration, I bring a solid understanding of systems, networks and clean troubleshooting.',
-    needSkill: 'I pick up new tools fast. Questions about my stack?',
-    cta: 'Get in touch.',
+    stackQuestion: 'I pick up new tools fast. Questions about my stack?',
+    callToAction: 'Get in touch.',
   },
   projects: {
     heading: 'Projects',
@@ -155,15 +156,16 @@ const en: Translation = {
     heading: 'Contact',
     title: "Let's",
     titleAccent: 'connect.',
-    desc: "Questions about my projects, feedback or just up for a chat about web development? Drop me a message – I'm happy to hear from you.",
+    description:
+      "Questions about my projects, feedback or just up for a chat about web development? Drop me a message – I'm happy to hear from you.",
   },
   form: {
     nameLabel: "What's your name?",
-    namePh: 'Your name goes here',
+    namePlaceholder: 'Your name goes here',
     emailLabel: "What's your email?",
-    emailPh: 'youremail@email.com',
-    msgLabel: 'How can I help you?',
-    msgPh: 'Hello Mahir, I am interested in…',
+    emailPlaceholder: 'youremail@email.com',
+    messageLabel: 'How can I help you?',
+    messagePlaceholder: 'Hello Mahir, I am interested in…',
     privacyBefore: "I've read the",
     privacyLink: 'privacy policy',
     privacyAfter: 'and agree to the processing of my data as outlined.',
@@ -174,7 +176,7 @@ const en: Translation = {
     errorName: 'Please enter your name.',
     errorEmailEmpty: 'Please enter your email address.',
     errorEmailInvalid: 'Please enter a valid email address.',
-    errorMsg: 'Please enter a message.',
+    errorMessage: 'Please enter a message.',
     errorRateLimit: "You've sent several messages recently. Please try again later or send me an email directly.",
   },
   footer: {
@@ -183,7 +185,7 @@ const en: Translation = {
   },
   impressum: {
     title: 'Legal Notice',
-    sub: 'Information according to § 5 DDG (German Digital Services Act)',
+    legalBasis: 'Information according to § 5 DDG (German Digital Services Act)',
     contact: 'Contact',
     phone: 'Phone:',
     email: 'Email:',
@@ -191,6 +193,6 @@ const en: Translation = {
   },
 };
 
-export type Lang = 'de' | 'en';
+export type Language = 'de' | 'en';
 
-export const translations: Record<Lang, Translation> = { de, en };
+export const translations: Record<Language, Translation> = { de, en };
