@@ -1,5 +1,4 @@
 export const contact = {
-  email: 'contact@mahir-durna.de',
   github: 'https://github.com/DurnaMa',
   linkedin: 'https://linkedin.com/in/mahir-durna',
 };
