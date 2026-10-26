@@ -48,9 +48,8 @@ const de = {
   references: {
     heading: 'Was andere sagen',
     items: [
-      'Ich war stets beeindruckt von Mahirs effizienter Arbeitsweise und seinem Einsatz für den Projekterfolg.',
-      'Mahir hat sich als zuverlässiger Teampartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Art waren entscheidend für den Erfolg unseres Projekts.',
-      'Ich hatte das große Glück, mit Mahir an einem Projekt in der Developer Akademie zu arbeiten. Er blieb immer ruhig und konzentriert, um den Erfolg unseres Teams sicherzustellen.',
+      'Die Zusammenarbeit mit Mahir war durchweg positiv.Er ist teamorientiert, hilfsbereit und bringt sich aktiv ein. Besonders schätze ich seine ruhige Art, mit der er auch in anspruchsvollen Situationen den Überblick behält, sowie seinen Fokus auf gut strukturierten, verständlichen Code.',
+      'Mit Dominique habe ich sehr gern zusammengearbeitet. Er ist teamorientiert, hilfsbereit und engagiert sich aktiv im Projekt. Ich schätze besonders, dass er auch unter Druck ruhig und strukturiert bleibt und Code schreibt, der klar aufgebaut und leicht verständlich ist.',
     ],
   },
   contact: {
@@ -147,9 +146,8 @@ const en: Translation = {
   references: {
     heading: 'What colleagues say',
     items: [
-      "I was continuously impressed by Mahir's efficient way of working and his dedication to the project's success.",
-      'Mahir has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-      'I had the good fortune of working with Mahir on a project at the Developer Akademie. He always stayed calm, cool, and collected to make sure our team was set up for success.',
+      'Working with Mahir has been a thoroughly positive experience. He is a team player, helpful, and actively contributes to the project. I particularly appreciate his calm demeanor, which allows him to maintain a clear perspective even in challenging situations, as well as his focus on well-structured, easy-to-understand code.',
+      'I really enjoyed working with Dominique. He is a team player, helpful, and actively involved in the project. I especially appreciate that he remains calm and organized even under pressure and writes code that is clearly structured and easy to understand.',
     ],
   },
   contact: {

@@ -58,15 +58,11 @@ export type Reference = { author: string; role: string };
 
 export const references: Reference[] = [
   {
-    author: 'T. Schulz',
-    role: 'Frontend Developer',
-  },
-  {
-    author: 'H. Janisch',
+    author: 'H. Alaie',
     role: 'Team Partner',
   },
   {
-    author: 'K. Meier',
-    role: 'Developer',
+    author: 'L. Dominique',
+    role: 'Team Partner',
   },
 ];
