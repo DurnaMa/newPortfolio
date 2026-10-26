@@ -39,10 +39,16 @@ const de = {
     label: 'Projekt',
     screenshot: 'Screenshot von',
     live: 'Live-Demo',
+    challengeLabel: 'Die Herausforderung',
     descriptions: {
       join: 'Ein Kanban-basiertes Projektmanagement-Tool, mit dem Teams Aufgaben per Drag-and-Drop organisieren, Personen zuweisen und Änderungen in Echtzeit verfolgen.',
       'fantasy-platform':
         'Ein klassisches Jump-and-Run-Browsergame mit Gegnern, Sammelobjekten und mehreren Leveln – komplett mit Vanilla JavaScript und OOP umgesetzt.',
+    } as Record<string, string>,
+    challenges: {
+      join: 'Mein Anspruch war ein Drag-and-Drop, das sich zuverlässig anfühlt: Aufgaben lassen sich flüssig zwischen den Spalten verschieben und landen dort, wo man sie ablegt. Ohne Ruckler und ohne Sonderfälle, die das Board durcheinanderbringen.',
+      'fantasy-platform':
+        'Eine der größten Herausforderungen waren die Kollisionsboxen. Da eine einfache Box bei angreifenden Gegnern nicht ausreicht, um die Figur richtig abzudecken, habe ich bei Spezialattacken und Waffenangriffen jeweils zwei Boxen verwendet',
     } as Record<string, string>,
   },
   references: {
@@ -137,10 +143,16 @@ const en: Translation = {
     label: 'Project',
     screenshot: 'Screenshot of',
     live: 'Live demo',
+    challengeLabel: 'The challenge',
     descriptions: {
       join: 'A Kanban-based project management tool that helps teams organize tasks with drag-and-drop boards, user assignments and real-time updates.',
       'fantasy-platform':
         'A classic jump-and-run browser game with enemies, collectibles and multiple levels – built entirely with vanilla JavaScript and OOP.',
+    },
+    challenges: {
+      join: 'My goal was a drag-and-drop that feels reliable: tasks move smoothly between columns and land exactly where you drop them. No jank and no edge cases that mess up the board.',
+      'fantasy-platform':
+        "One of the biggest challenges was the collision boxes. A single box isn't enough when enemies attack, so I used two boxes for weapon and special attacks.",
     },
   },
   references: {
